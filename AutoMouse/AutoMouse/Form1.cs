@@ -15,9 +15,11 @@ namespace AutoMouse {
         }
 
         void _map_Changed(object sender, EventArgs e) {
-            this.panMap.Invalidate();
-            Application.DoEvents();
-            System.Threading.Thread.Sleep(500);
+            if (chkStepByStep.Checked) {
+                this.panMap.Invalidate();
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(500);
+            }
         }
 
         private void panMap_Paint(object sender, PaintEventArgs e) {
@@ -75,7 +77,11 @@ namespace AutoMouse {
         }
 
         private void btnStart_Click(object sender, EventArgs e) {
+            var watch = new System.Diagnostics.Stopwatch();
+            watch.Start();
             this._map.Start();
+            watch.Stop();
+            MessageBox.Show(string.Format("耗时：{0}", watch.Elapsed), "完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnRead_Click(object sender, EventArgs e) {

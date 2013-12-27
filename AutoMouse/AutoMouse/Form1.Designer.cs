@@ -34,6 +34,7 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.btnRead = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.chkStepByStep = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,11 +148,24 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // chkStepByStep
+            // 
+            this.chkStepByStep.AutoSize = true;
+            this.chkStepByStep.Checked = true;
+            this.chkStepByStep.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkStepByStep.Location = new System.Drawing.Point(369, 16);
+            this.chkStepByStep.Name = "chkStepByStep";
+            this.chkStepByStep.Size = new System.Drawing.Size(84, 16);
+            this.chkStepByStep.TabIndex = 11;
+            this.chkStepByStep.Text = "慢动作播放";
+            this.chkStepByStep.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.chkStepByStep);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnRead);
             this.Controls.Add(this.btnStart);
@@ -184,6 +198,7 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnRead;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.CheckBox chkStepByStep;
     }
 }
 
